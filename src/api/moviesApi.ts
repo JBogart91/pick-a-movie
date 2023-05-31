@@ -1,5 +1,6 @@
 import { handleResponse, handleError } from "./apiUtils";
-const baseUrl = process.env.API_URL + "/courses/";
+import { movie } from "../types/pickAMovieTypes";
+const baseUrl = process.env.API_URL + "/movies/";
 
 export function getMovies() {
   return fetch(baseUrl)
@@ -7,7 +8,7 @@ export function getMovies() {
     .catch(handleError);
 }
 
-export function saveMovies(movie: { id: number; }) {
+export function saveMovie(movie: movie) {
   return fetch(baseUrl + (movie.id || ""), {
     method: movie.id ? "PUT" : "POST", // POST for create, PUT to update when id already exists.
     headers: { "content-type": "application/json" },

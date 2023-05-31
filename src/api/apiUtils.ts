@@ -7,7 +7,7 @@ export async function handleResponse(response: { ok: any; json: () => any; statu
   throw new Error("Network response was not ok.");
 }
 
-export function handleError(error: string) {
+export function handleError(error: any) {
   // eslint-disable-next-line no-console
   console.error("API call failed. " + error);
   throw error;

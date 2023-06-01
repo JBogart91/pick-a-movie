@@ -1,8 +1,10 @@
 const  App = ()  => {
   return (
-    <div>
-      <h1>Hello, World!</h1>
-    </div>
+    <>
+      <div id="container" className="px-8">
+        <h1 className="mt-2">Pick-a-Movie</h1>
+      </div>
+    </>
   );
 }
 

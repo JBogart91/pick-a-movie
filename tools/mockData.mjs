@@ -4,6 +4,7 @@ const movies = [
     title: 'Ghostbusters',
     year: 1984,
     director: 'Ivan Reitman',
+    watched: false,
   },
 ];
 
